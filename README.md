@@ -110,11 +110,6 @@ bash                      more of it than I plan on
 
 ### Elsewhere
 
-[gzl.dev](https://gzl.dev) holds the blog, the bookshelf, the film log, and the
+[gzl.dev](https://gzl.dev) has my blog, my bookshelf, my film log, and my
 photographs. Everything else is on this page.
 
-```
-battery ▓▓▓▓▓▓▓░░ 78%     signal ▁▃▅     unread 0
-```
-
-No badges. They do not fit on the screen.
