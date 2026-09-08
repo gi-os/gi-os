@@ -1,5 +1,5 @@
 # GIOVANNI LUPO
-──────────────────────────────────
+
 
 new york · gio@gi-os.com · gzl.dev
 
