@@ -1,5 +1,6 @@
 # GIOVANNI LUPO
 ──────────────────────────────────
+
 new york · gio@gi-os.com · gzl.dev
 
 shops    storefronts, and the dashboard that runs them
