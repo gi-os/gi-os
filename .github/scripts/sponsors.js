@@ -1,6 +1,7 @@
 // Rebuilds the sponsor thanks in two places from the live GitHub Sponsors list:
 //   README.md                  the block between <!-- Sponsors --> markers
 //   images/bright-sponsors.svg the banner every Bright app's README embeds
+//   sponsors.json              the list brightmarket.gzl.dev reads
 // Run by .github/workflows/sponsors.yml; `node sponsors.js preview name1 name2` renders locally.
 
 const fs = require('fs');
@@ -59,6 +60,7 @@ function write(sponsors) {
     /(<!-- Sponsors -->\n)[\s\S]*?(<!-- \/Sponsors -->)/,
     (_, open, close) => `${open}${readmeBlock(sponsors)}\n${close}`));
   fs.writeFileSync('images/bright-sponsors.svg', banner(sponsors));
+  fs.writeFileSync('sponsors.json', JSON.stringify({ sponsors }, null, 2) + '\n');
 }
 
 module.exports = async ({ github, context }) => {
