@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 44" width="800" height="44" role="img" aria-label="Thanks for stopping by">
+  <style>
+    .t { font-family: "VT323", "Courier New", Courier, monospace; font-weight: 700; font-size: 20px; letter-spacing: 3px; fill: #FFE600; }
+    .run { animation: run 14s linear infinite; }
+    @keyframes run { from { transform: translateX(800px); } to { transform: translateX(-1100px); } }
+  </style>
+  <rect width="800" height="44" fill="#0B0B0F"/>
+  <rect y="0" width="800" height="3" fill="#1530FF"/>
+  <rect y="41" width="800" height="3" fill="#1530FF"/>
+  <g class="run">
+    <text x="0" y="29" class="t">*** THANKS FOR STOPPING BY *** SIGN THE GUESTBOOK *** SEE YOU NEXT TIME ***</text>
+  </g>
+</svg>

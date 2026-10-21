@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-label="GIOVANNI LUPO - retro terminal welcome screen">
+  <style>
+    .t   { font-family: "VT323", "Courier New", Courier, monospace; font-weight: 700; }
+    .big { font-size: 46px; letter-spacing: 6px; }
+    .md  { font-size: 22px; letter-spacing: 2px; }
+    .sm  { font-size: 16px; letter-spacing: 2px; }
+    .cy { fill: #00E5FF; } .ye { fill: #FFE600; } .ma { fill: #FF3EC8; }
+    .gr { fill: #3CFF6B; } .wh { fill: #F2F2F2; } .rd { fill: #FF4040; }
+
+    /* typewriter: a block covering each line steps off to the right */
+    .cover { animation: type 1.4s steps(28) forwards; }
+    .l1 { animation-delay: .3s; }  .l2 { animation-delay: 1.8s; }
+    .l3 { animation-delay: 3.2s; } .l4 { animation-delay: 4.6s; }
+    @keyframes type { to { transform: translateX(780px); } }
+
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .scan { animation: scan 6s linear infinite; }
+    @keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(320px); } }
+  </style>
+
+  <defs>
+    <pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" opacity=".35"/>
+    </pattern>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- screen -->
+  <rect width="800" height="300" rx="22" fill="#0B0B0F"/>
+
+  <!-- teletext header bar -->
+  <rect x="20" y="20" width="760" height="40" fill="#1530FF"/>
+  <text x="34" y="48" class="t md wh">P.01</text>
+  <text x="400" y="48" class="t md ye" text-anchor="middle">GIOVANNI LUPO</text>
+  <text x="766" y="48" class="t md wh" text-anchor="end">FREE ACCESS</text>
+
+  <!-- colour blocks (mosaic graphics) -->
+  <g>
+    <rect x="20"  y="72" width="60" height="16" fill="#FF4040"/>
+    <rect x="80"  y="72" width="60" height="16" fill="#FFE600"/>
+    <rect x="140" y="72" width="60" height="16" fill="#3CFF6B"/>
+    <rect x="200" y="72" width="60" height="16" fill="#00E5FF"/>
+    <rect x="260" y="72" width="60" height="16" fill="#1530FF"/>
+    <rect x="320" y="72" width="60" height="16" fill="#FF3EC8"/>
+  </g>
+  <text x="780" y="86" class="t sm gr" text-anchor="end">CONNECTED</text>
+
+  <!-- typed lines (each hidden by a screen-coloured block that steps off to the right) -->
+  <text x="20" y="152" class="t big cy">HELLO, I'M GIO</text>
+  <text x="20" y="190" class="t md wh">&gt; new york · gzl.dev</text>
+  <text x="20" y="226" class="t md ma">&gt; iphone apps, shops &amp; systems</text>
+  <text x="20" y="262" class="t md ye">&gt; press SEND to continue<tspan class="cursor">█</tspan></text>
+  <rect class="cover l1" x="16" y="112" width="780" height="50" fill="#0B0B0F"/>
+  <rect class="cover l2" x="16" y="168" width="780" height="30" fill="#0B0B0F"/>
+  <rect class="cover l3" x="16" y="204" width="780" height="30" fill="#0B0B0F"/>
+  <rect class="cover l4" x="16" y="240" width="780" height="30" fill="#0B0B0F"/>
+
+  <!-- CRT effects -->
+  <rect width="800" height="300" rx="22" fill="url(#lines)"/>
+  <rect class="scan" width="800" height="40" fill="url(#beam)"/>
+  <rect x="3" y="3" width="794" height="294" rx="20" fill="none" stroke="#2A2A33" stroke-width="6"/>
+</svg>
