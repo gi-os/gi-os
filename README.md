@@ -1,98 +1,82 @@
-# GIOVANNI LUPO
+<!-- Retro terminal header -->
+<div align="center">
+  <img src="images/header.svg" width="100%" alt="GIOVANNI LUPO — Hello, I'm Gio. New York. iPhone apps, shops and systems." />
+</div>
 
+<p align="center">
+Small software, end to end: the schema, the API, the interface, the container.<br />
+<a href="https://gzl.dev">gzl.dev</a> · <a href="mailto:gio@gi-os.com">gio@gi-os.com</a>
+</p>
 
-new york · gio@gi-os.com · gzl.dev
+<!-- Menu: like an old terminal service index -->
+<table width="100%">
+<tr>
+<td align="center" width="33%"><a href="#iphone"><strong>1 · IPHONE</strong></a></td>
+<td align="center" width="33%"><a href="#shops"><strong>2 · SHOPS</strong></a></td>
+<td align="center" width="33%"><a href="#light-phone"><strong>3 · LIGHT PHONE</strong></a></td>
+</tr>
+</table>
 
-shops    storefronts, and the dashboard that runs them
-phones   apps for a phone with no app store, and the store they install from
-systems  a desktop in a browser tab, 2015 to version 7
+### iPhone
 
-### About
-
-I build small software, and I usually own the whole thing: the schema, the
-API, the interface, and the container it ships in. Ten years of it.
+| | |
+|---|---|
+| [**XA**](https://github.com/gi-os/XA) | a camera that's fun to use: filters, date backs, purikura |
+| [**NDPass**](https://github.com/gi-os/NDPass) | collects your movie ticket stubs, with a little help from AI |
+| [**m-cas**](https://github.com/gi-os/m-cas) | a tape recorder: one continuous tape per trip, wound with your thumb |
+| [**BlockBliss**](https://github.com/gi-os/BlockBliss) | an honest 8×8 block puzzle, none of the manipulation |
+| [**SupernoteIOS**](https://github.com/gi-os/SupernoteIOS) | a Supernote client for iPhone and iPad that syncs like a real device |
 
 ### Shops
 
-[Shuttle](https://github.com/LR-Paris/Shuttle) is a storefront platform.
-[Launchpad](https://github.com/LR-Paris/Launchpad) is the dashboard that
-creates a shop, stocks it, and puts it online.
+[**Shuttle**](https://github.com/LR-Paris/Shuttle) runs the storefronts.
+[**Launchpad**](https://github.com/LR-Paris/Launchpad) creates, stocks and launches them.
+One container per shop, one droplet for all of it. The shops on lrparisstore.com run here.
 
-One Docker container per shop, nginx routing by path, orders and inventory
-as CSV. Session auth with bcrypt and rate limiting, a file manager for the
-shop directory, and a self-update that pulls a new version from GitHub while
-the platform runs.
+[**BrightMarket**](https://github.com/gi-os/BrightMarket) is a shop of a different kind: an app store for the Light Phone III,
+with an [index](https://github.com/gi-os/brightmarket-index) anyone can submit to.
 
-Express and SQLite underneath, React and Vite on top, one DigitalOcean
-droplet holding all of it. The client shops on lrparisstore.com run on it.
-Version 4.
+### Light Phone
 
-### Phones
-
-The Light Phone III has a black-and-white screen whose home screen is a list
-of words. I wrote the apps it doesn't ship with, and the store they live in:
-twenty Kotlin apps, one shared library, one marketplace with a submission
-portal.
+Apps for a phone whose home screen is a list of words.
 
 | | |
-| --- | --- |
-| [BrightMarket](https://github.com/gi-os/BrightMarket) | the app store, plus an [index](https://github.com/gi-os/brightmarket-index) to submit to it |
-| [Roll](https://github.com/gi-os/Roll) | camera with filters |
-| [BrightNotebook](https://github.com/gi-os/BrightNotebook) | notes, folders, calendar |
-| [BrightMusic](https://github.com/gi-os/BrightMusic) | Spotify client |
-| [BrightRecorder](https://github.com/gi-os/BrightRecorder) | voice recorder |
-| [BrightLibrary](https://github.com/gi-os/BrightLibrary) | e-reader, manga and Calibre support |
+|---|---|
+| [**Roll**](https://github.com/gi-os/Roll) | a camera that's fun to use, the original XA |
+| [**BrightControl**](https://github.com/gi-os/BrightControl) | the brightness wheel and camera button, working inside any app |
+| [**BrightKeyboard**](https://github.com/gi-os/BrightKeyboard) | the Light Phone keyboard, for any app |
+| [**BrightMailbox**](https://github.com/gi-os/BrightMailbox) | email: letters from people, notices from machines, five a day |
 
-Fifteen more behind those:
-[Control](https://github.com/gi-os/BrightControl) ·
-[Import](https://github.com/gi-os/BrightImport) ·
-[Transit](https://github.com/gi-os/BrightTransit) ·
-[Way](https://github.com/gi-os/BrightWay) ·
-[Sports](https://github.com/gi-os/BrightSports) ·
-[Authenticator](https://github.com/gi-os/BrightAuthenticator) ·
-[thumb](https://github.com/gi-os/brightthumb) ·
-[Common](https://github.com/gi-os/BrightCommon) ·
-[Solitaire](https://github.com/gi-os/BrightSolitaire) ·
-[Sudoku](https://github.com/gi-os/BrightSudoku) ·
-[Nonogram](https://github.com/gi-os/BrightNonogram) ·
-[News](https://github.com/gi-os/BrightNews) ·
-[Noise](https://github.com/gi-os/BrightNoise) ·
-[Passes](https://github.com/gi-os/BrightPasses) ·
-[Sync](https://github.com/gi-os/BrightSync)
-
-My girlfriend carries a Kyocera flip phone, so that got a
-[launcher](https://github.com/gi-os/PickleLauncher) and a
-[solitaire](https://github.com/gi-os/PickleSolitaire) too.
+[All of them →](https://github.com/gi-os?tab=repositories&q=Bright)
 
 ### Systems
 
 ```
-Gi-OS          a desktop in a browser tab, started 2015, now on version 7
-PassportOS     C, for the Passport device
-June4 / June7  a virtual secretary, written before the assistants arrived
+GI-OS        a desktop in a browser tab · since 2015 · v7
+PASSPORTOS   C, for the Passport device
+JUNE         a virtual secretary, before the assistants
 ```
 
-### Odds and ends
-
 ```
-zip            PWA clone of the LinkedIn Zip puzzle
-TeslaHUD       a heads-up display for a car that already has one
-basilnethome   the front door to my home server
-GmsSpoof       make Google's apps trust microG on a phone with none
-feed-guard     per-device feed time budgets, enforced at the DNS layer
+STACK  swift · kotlin · node · sqlite · react · docker · nginx · bash
 ```
 
-### Stack
+### Guestbook
 
-```
-kotlin, android           twenty apps, one shared library, one app store
-node, express, sqlite     shuttle and launchpad, version 4
-react, vite, tailwind     the dashboard the shops are run from
-docker, nginx, ubuntu     one container per shop, one droplet, no kubernetes
-bash                      more of it than I plan on
-```
+<div align="center">
+  <a href="https://github.com/gi-os/gi-os/issues/1#issuecomment-new">
+    <img src="images/guestbook.svg" alt="Sign the guestbook" />
+  </a>
+</div>
 
-### Elsewhere
+<!-- Guestbook -->
+| Name | Date | Message |
+|---|---|---|
+| — | — | Be the first to sign! |
+<!-- /Guestbook -->
 
-[gzl.dev](https://gzl.dev) — my blog, my bookshelf, my film log, my photographs.
-Everything else is on this page.
+<br />
+
+<div align="center">
+  <img src="images/ticker.svg" width="100%" alt="Thanks for stopping by" />
+</div>
