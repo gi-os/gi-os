@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 190" width="800" height="190" role="img" aria-label="Thank you to my sponsors: lobstermaninurhouse-dev">
+  <style>
+    text { font-family: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; fill: #FFFFFF; }
+    .head { font-size: 40px; font-weight: 300; letter-spacing: -0.5px; }
+    .name { font-size: 26px; font-weight: 400; }
+    .dim  { fill: #8C8C8C; }
+    .foot { font-size: 15px; fill: #8C8C8C; letter-spacing: 0.5px; }
+    .dot  { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .25; } }
+  </style>
+  <rect width="800" height="190" rx="18" fill="#000000"/>
+  <circle class="dot" cx="752" cy="50" r="6" fill="#FFFFFF"/>
+  <text x="48" y="62" class="head">thank you</text>
+  <text x="48" y="100" class="name">lobstermaninurhouse-dev</text>
+  <text x="48" y="160" class="foot">this app is free because of my sponsors · github.com/sponsors/gi-os</text>
+</svg>

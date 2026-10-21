@@ -69,4 +69,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git diff --quiet && exit 0
           git commit -am 'guestbook: update'
+          git pull --rebase
           git push

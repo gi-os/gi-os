@@ -61,6 +61,16 @@ JUNE         a virtual secretary, before the assistants
 STACK  swift · kotlin · node · sqlite · react · docker · nginx · bash
 ```
 
+### Sponsors
+
+<!-- Sponsors -->
+<p align="center">
+<a href="https://github.com/lobstermaninurhouse-dev"><img src="https://github.com/lobstermaninurhouse-dev.png?size=64" width="48" height="48" alt="lobstermaninurhouse-dev" title="lobstermaninurhouse-dev" /></a>
+</p>
+
+<p align="center">Thank you, <a href="https://github.com/lobstermaninurhouse-dev">@lobstermaninurhouse-dev</a>, and everyone who sponsors quietly.<br />Every Bright app is free because of you. <a href="https://github.com/sponsors/gi-os">Sponsor →</a></p>
+<!-- /Sponsors -->
+
 ### Guestbook
 
 <div align="center">

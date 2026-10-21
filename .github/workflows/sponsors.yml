@@ -1,0 +1,38 @@
+# Refreshes the sponsor thanks (README block + images/bright-sponsors.svg) once a day.
+
+name: Sponsors
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sponsors
+  cancel-in-progress: false
+
+jobs:
+  update_sponsors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render sponsors
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = require('./.github/scripts/sponsors.js');
+            await run({ github, context });
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md images/bright-sponsors.svg
+          git diff --cached --quiet && exit 0
+          git commit -m 'sponsors: update'
+          git pull --rebase
+          git push
