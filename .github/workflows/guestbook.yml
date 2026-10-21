@@ -1,0 +1,72 @@
+# Rebuilds the guestbook table in README.md from comments on the issue titled "Guestbook".
+# Idea from github.com/BrunnerLivio (who credits github.com/openscript).
+
+name: Guestbook
+
+on:
+  issue_comment:
+    types: [created, edited, deleted]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guestbook
+  cancel-in-progress: false
+
+jobs:
+  update_guestbook:
+    if: ${{ github.event.issue.title == 'Guestbook' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render latest comments into README
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const MAX = 8;
+
+            const { repository } = await github.graphql(`
+              query($owner:String!, $name:String!, $number:Int!) {
+                repository(owner:$owner, name:$name) {
+                  issue(number:$number) {
+                    comments(last: ${MAX}) {
+                      nodes { author { login url avatarUrl(size: 24) } bodyText createdAt }
+                    }
+                  }
+                }
+              }`, { owner: context.repo.owner, name: context.repo.repo, number: context.issue.number });
+
+            // Visitors write the content, so escape everything before it lands in the README.
+            const esc = s => s
+              .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+              .replace(/\|/g, '&#124;').replace(/\r?\n/g, ' ');
+            const cut = (s, n) => s.length > n ? s.slice(0, n) + '…' : s;
+
+            const rows = repository.issue.comments.nodes
+              .filter(c => c.author)                       // skip deleted accounts
+              .reverse()                                   // newest first
+              .map(c => {
+                const day = c.createdAt.slice(0, 10);
+                const who = `<a href="${c.author.url}"><img width="24" src="${c.author.avatarUrl}" alt="" /> ${c.author.login}</a>`;
+                return `| ${who} | ${day} | ${cut(esc(c.bodyText), 140)} |`;
+              });
+
+            const table = ['| Name | Date | Message |', '|---|---|---|',
+              ...(rows.length ? rows : ['| — | — | Be the first to sign! |'])].join('\n');
+
+            const readme = fs.readFileSync('README.md', 'utf8');
+            const updated = readme.replace(
+              /(<!-- Guestbook -->\n)[\s\S]*?(<!-- \/Guestbook -->)/,
+              (_, open, close) => `${open}${table}\n${close}`);
+            fs.writeFileSync('README.md', updated);
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git diff --quiet && exit 0
+          git commit -am 'guestbook: update'
+          git push
