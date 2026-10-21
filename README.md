@@ -82,7 +82,7 @@ STACK  swift · kotlin · node · sqlite · react · docker · nginx · bash
 <!-- Guestbook -->
 | Name | Date | Message |
 |---|---|---|
-| — | — | Be the first to sign! |
+| <a href="https://github.com/Ameryth"><img width="24" src="https://avatars.githubusercontent.com/u/209355906?s=24&v=4" alt="" /> Ameryth</a> | 2026-10-21 | Signed. |
 <!-- /Guestbook -->
 
 <br />
