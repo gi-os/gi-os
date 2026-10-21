@@ -1,4 +1,4 @@
-// Rebuilds the sponsor thanks in two places from the live GitHub Sponsors list:
+// Rebuilds the sponsor thanks in three places from the live GitHub Sponsors list:
 //   README.md                  the block between <!-- Sponsors --> markers
 //   images/bright-sponsors.svg the banner every Bright app's README embeds
 //   sponsors.json              the list brightmarket.gzl.dev reads
