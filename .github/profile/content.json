@@ -1,0 +1,85 @@
+{
+  "person": {
+    "name": "Giovanni Lupo",
+    "since": "2015",
+    "standfirst": ["I make small apps and build every part myself,", "down to the server they run on."],
+    "contact": [
+      { "label": "New York" },
+      { "label": "gzl.dev", "url": "https://gzl.dev" },
+      { "label": "gio@gi-os.com", "url": "mailto:gio@gi-os.com" }
+    ]
+  },
+  "sections": [
+    {
+      "id": "iphone",
+      "title": "iPhone",
+      "items": [
+        { "name": "XA", "glyph": "camera", "url": "https://github.com/gi-os/XA", "tag": "Swift",
+          "line": "A camera for iPhone with film filters, date stamps and purikura." },
+        { "name": "NDPass", "glyph": "ticket", "url": "https://github.com/gi-os/NDPass", "tag": "Swift",
+          "line": "Photograph a ticket stub and it reads the venue, date and seat." },
+        { "name": "m-cas", "glyph": "cassette", "url": "https://github.com/gi-os/m-cas", "tag": "Swift",
+          "line": "A tape recorder with one long tape per trip, wound with your thumb." },
+        { "name": "Bunko", "glyph": "book", "url": "https://github.com/gi-os/Bunko", "tag": "Swift",
+          "line": "An e-reader styled after Japanese paperbacks, with ribbon bookmarks." },
+        { "name": "TapeDelay", "glyph": "pause", "url": "https://github.com/gi-os/TapeDelay", "tag": "Swift",
+          "line": "Sports scores and alerts that wait until your stream catches up." },
+        { "name": "BlockBliss", "glyph": "blocks", "url": "https://github.com/gi-os/BlockBliss", "tag": "Swift",
+          "line": "An 8×8 block puzzle with no ads or revives. It never goes online." },
+        { "name": "SupernoteIOS", "glyph": "notebook", "url": "https://github.com/gi-os/SupernoteIOS", "tag": "Swift",
+          "line": "A Supernote app for iPhone and iPad that syncs like another Supernote." },
+        { "name": "All Swift projects", "kind": "more", "url": "https://github.com/gi-os?tab=repositories&language=swift" }
+      ]
+    },
+    {
+      "id": "shops",
+      "title": "Shops",
+      "intro": "I built these at LR Paris. Every shop on [lrparisstore.com](https://lrparisstore.com) runs on them, each in its own container on one shared server.",
+      "items": [
+        { "name": "Shuttle", "glyph": "storefront", "url": "https://lrparisstore.com", "tag": "Private",
+          "line": "Runs the storefronts." },
+        { "name": "Launchpad", "glyph": "rocket", "url": "https://lrparisstore.com", "tag": "Private",
+          "line": "Creates, stocks and launches shops." }
+      ]
+    },
+    {
+      "id": "light-phone",
+      "title": "Light Phone",
+      "intro": "Apps for a phone whose home screen is a list of words.",
+      "words": ["market", "roll", "notebook", "mailbox", "keyboard", "sports", "library", "noise", "remote",
+                "voice", "home", "tip", "way", "solitaire", "rolodex", "passes", "music", "ledger"],
+      "items": [
+        { "name": "BrightMarket", "glyph": "bag", "url": "https://github.com/gi-os/BrightMarket", "tag": "Kotlin",
+          "line": "An app store for sideloaded Light Phone apps. Anyone can submit." },
+        { "name": "Roll", "glyph": "film", "url": "https://github.com/gi-os/Roll", "tag": "Kotlin",
+          "line": "A camera for the Light Phone III. The wheel works as a lens ring." },
+        { "name": "BrightControl", "glyph": "wheel", "url": "https://github.com/gi-os/BrightControl", "tag": "Kotlin",
+          "line": "Makes the wheel and camera button work in any app." },
+        { "name": "BrightKeyboard", "glyph": "keyboard", "url": "https://github.com/gi-os/BrightKeyboard", "tag": "Kotlin",
+          "line": "The Light Phone keyboard in every app, plus swipe typing." },
+        { "name": "BrightMailbox", "glyph": "envelope", "url": "https://github.com/gi-os/BrightMailbox", "tag": "Kotlin",
+          "line": "Separates letters from notices, and can stop at five letters a day." },
+        { "name": "All Bright apps", "kind": "more", "url": "https://github.com/gi-os?tab=repositories&q=Bright" }
+      ],
+      "outro": "To list an app in BrightMarket, add it to [brightmarket-index](https://github.com/gi-os/brightmarket-index)."
+    },
+    {
+      "id": "systems",
+      "title": "Systems",
+      "items": [
+        { "name": "GI-OS", "glyph": "window", "tag": "Web",
+          "line": "A desktop in a browser tab. Started in 2015, now on version 7." },
+        { "name": "PassportOS", "glyph": "chip", "url": "https://github.com/gi-os/PassportOS", "tag": "C",
+          "line": "An operating system in C for the gi-os Passport." },
+        { "name": "June", "glyph": "bell", "url": "https://github.com/gi-os/June4",
+          "line": "A Discord bot that works as a personal secretary." },
+        { "name": "All repositories", "kind": "more", "url": "https://github.com/gi-os?tab=repositories" }
+      ],
+      "outro": "Most of this is Swift, Kotlin or Node, with SQLite, React, Docker, nginx and bash."
+    }
+  ],
+  "links": {
+    "sponsor": "https://github.com/sponsors/gi-os",
+    "guestbook": "https://github.com/gi-os/gi-os/issues/1#issuecomment-new"
+  }
+}

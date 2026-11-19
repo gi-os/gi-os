@@ -2,24 +2,25 @@
 //   README.md                  the block between <!-- Sponsors --> markers
 //   images/bright-sponsors.svg the banner every Bright app's README embeds
 //   sponsors.json              the list brightmarket.gzl.dev reads
-// Run by .github/workflows/sponsors.yml; `node sponsors.js preview name1 name2` renders locally.
+// Run by .github/workflows/sponsors.yml. Locally, from the repo root:
+//   node .github/scripts/sponsors.js preview name1 name2   prints the banner SVG
+//   node .github/scripts/sponsors.js local                 re-renders all three from sponsors.json
 
 const fs = require('fs');
-
-const SPONSOR_URL = 'https://github.com/sponsors/gi-os';
 
 const xml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function readmeBlock(sponsors) {
+  // The README puts a Sponsor button right after this block, so the block itself has no link to it.
   if (!sponsors.length) {
-    return `<p align="center">No sponsors yet. <a href="${SPONSOR_URL}">Be the first →</a></p>`;
+    return `<p>No sponsors yet.</p>`;
   }
   const faces = sponsors
     .map(s => `<a href="https://github.com/${s}"><img src="https://github.com/${s}.png?size=64" width="48" height="48" alt="${s}" title="${s}" /></a>`)
     .join('\n');
-  return `<p align="center">\n${faces}\n</p>\n\n` +
-    `<p align="center">Thank you, ${sponsors.map(s => `<a href="https://github.com/${s}">@${s}</a>`).join(', ')}, ` +
-    `and everyone who sponsors quietly.<br />Every Bright app is free because of you. <a href="${SPONSOR_URL}">Sponsor →</a></p>`;
+  return `<p>\n${faces}\n</p>\n\n` +
+    `<p>Thank you, ${sponsors.map(s => `<a href="https://github.com/${s}">@${s}</a>`).join(', ')}, ` +
+    `and everyone who sponsors privately. Sponsorships help keep the Bright apps free.</p>`;
 }
 
 // Light Phone look: black screen, one column of words, nothing else.
@@ -76,4 +77,8 @@ module.exports = async ({ github, context }) => {
 
 if (require.main === module && process.argv[2] === 'preview') {
   process.stdout.write(banner(process.argv.slice(3)));
+}
+
+if (require.main === module && process.argv[2] === 'local') {
+  write(JSON.parse(fs.readFileSync('sponsors.json', 'utf8')).sponsors);
 }

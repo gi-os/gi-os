@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="502" viewBox="0 0 846 502" role="img" aria-label="Giovanni Lupo. Index of work, 17 projects, 2015 to now. I make small apps and build every part myself, down to the server they run on.">
+<style>.u{stroke-dasharray:1;animation:draw 1.3s ease-out .5s both}@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }</style>
+<line x1="0" y1="1" x2="846" y2="1" stroke="#f0f6fc" stroke-width="2"/>
+<text x="0" y="165" font-family='"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif' font-size="156" font-weight="400" text-anchor="start" fill="#f0f6fc" letter-spacing="-3">Giovanni</text>
+<text x="0" y="309" font-family='"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif' font-size="156" fill="#f0f6fc" letter-spacing="-3">Lupo<tspan fill="#ff7a59">.</tspan></text>
+<text x="822" y="232" font-family='ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace' font-size="38" font-weight="700" text-anchor="end" fill="#ff7a59">Index of work</text>
+<path class="u" pathLength="1" d="M526 250C582 245 642 254 702 248S792 251 822 247" fill="none" stroke="#ff7a59" stroke-width="4" stroke-linecap="round"/>
+<text x="822" y="288" font-family='ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace' font-size="38" font-weight="400" text-anchor="end" fill="#f0f6fc">17 projects</text>
+<text x="822" y="330" font-family='ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace' font-size="38" font-weight="400" text-anchor="end" fill="#9198a1">2015 to now</text>
+<line x1="0" y1="368" x2="846" y2="368" stroke="#4f5762" stroke-width="1"/>
+<text x="0" y="428" font-family='"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif' font-size="39" font-weight="400" text-anchor="start" fill="#f0f6fc" font-style="italic">I make small apps and build every part myself,</text>
+<text x="0" y="478" font-family='"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif' font-size="39" font-weight="400" text-anchor="start" fill="#f0f6fc" font-style="italic">down to the server they run on.</text>
+</svg>

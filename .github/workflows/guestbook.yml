@@ -55,7 +55,7 @@ jobs:
               });
 
             const table = ['| Name | Date | Message |', '|---|---|---|',
-              ...(rows.length ? rows : ['| — | — | Be the first to sign! |'])].join('\n');
+              ...(rows.length ? rows : ['| | | No entries yet. |'])].join('\n');
 
             const readme = fs.readFileSync('README.md', 'utf8');
             const updated = readme.replace(

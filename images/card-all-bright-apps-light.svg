@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="128" viewBox="0 0 420 128" role="img" aria-label="All Bright apps">
+<style>@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }</style>
+<line x1="0" y1="1" x2="420" y2="1" stroke="#1f2328" stroke-width="2"/>
+<text x="0" y="38" font-family='ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace' font-size="18" font-weight="700" text-anchor="start" fill="#c93c1e">More</text>
+<text x="0" y="104" font-family='"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif' font-size="40" font-weight="400" text-anchor="start" fill="#1f2328" letter-spacing="-0.5">All Bright apps</text>
+<g transform="translate(357.1 66) scale(1.22)"><g fill="none" stroke="#c93c1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H31M22 9L31 18L22 27"/></g></g>
+</svg>
